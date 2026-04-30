@@ -1,0 +1,203 @@
+:root {
+  --hlt-base: #080808;
+  --hlt-base-soft: #111111;
+  --hlt-white: #f2f2f2;
+  --hlt-gray: #a6a6a6;
+  --hlt-red: #e10600;
+  --hlt-border: rgba(242, 242, 242, 0.2);
+  --hlt-space-1: 0.75rem;
+  --hlt-space-2: 1rem;
+  --hlt-space-3: 1.5rem;
+  --hlt-space-4: 2.5rem;
+  --hlt-space-5: 4rem;
+}
+
+body {
+  background: var(--hlt-base);
+  color: var(--hlt-white);
+}
+
+p {
+  max-width: 72ch;
+}
+
+header.wp-block-template-part,
+footer.wp-block-template-part {
+  background: var(--hlt-base);
+  border-color: var(--hlt-border);
+}
+
+header.wp-block-template-part {
+  border-bottom: 1px solid var(--hlt-border);
+}
+
+footer.wp-block-template-part {
+  border-top: 1px solid var(--hlt-border);
+}
+
+a,
+a:visited {
+  color: var(--hlt-white);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--hlt-red);
+}
+
+.wp-block-button__link,
+button,
+input[type="submit"] {
+  background: var(--hlt-red);
+  border: 1px solid var(--hlt-red);
+  color: var(--hlt-white);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.wp-block-button__link:hover,
+button:hover,
+input[type="submit"]:hover {
+  background: transparent;
+  color: var(--hlt-red);
+}
+
+:is(
+  .hlt-hero,
+  .hlt-problem,
+  .hlt-services,
+  .hlt-featured-projects,
+  .hlt-method,
+  .hlt-ai,
+  .hlt-trust,
+  .hlt-faq,
+  .hlt-final-cta,
+  .hlt-services-hero,
+  .hlt-core-services,
+  .hlt-secondary-services,
+  .hlt-projects-hero,
+  .hlt-method-hero,
+  .hlt-about-hero,
+  .hlt-contact-hero
+) {
+  padding: var(--hlt-space-5) var(--hlt-space-3);
+}
+
+.hlt-hero h1,
+.hlt-services-hero h1,
+.hlt-projects-hero h1,
+.hlt-method-hero h1,
+.hlt-about-hero h1,
+.hlt-contact-hero h1 {
+  font-size: clamp(2.25rem, 8vw, 5.25rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--hlt-space-3);
+  max-width: 18ch;
+}
+
+.hlt-hero p,
+.hlt-services-hero p,
+.hlt-projects-hero p,
+.hlt-method-hero p,
+.hlt-about-hero p,
+.hlt-contact-hero p {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.hlt-problem,
+.hlt-services,
+.hlt-featured-projects,
+.hlt-method,
+.hlt-ai,
+.hlt-trust,
+.hlt-faq,
+.hlt-core-services,
+.hlt-secondary-services {
+  background: var(--hlt-base-soft);
+  border-top: 1px solid var(--hlt-border);
+}
+
+.hlt-services .wp-block-column,
+.hlt-core-services .wp-block-column,
+.hlt-secondary-services .wp-block-column,
+.hlt-featured-projects .wp-block-group,
+.hlt-trust .wp-block-group,
+.hlt-faq details {
+  background: var(--hlt-base);
+  border: 1px solid var(--hlt-border);
+  padding: var(--hlt-space-3);
+}
+
+.hlt-featured-projects h3,
+.hlt-core-services h3,
+.hlt-secondary-services h3,
+.hlt-faq summary {
+  color: var(--hlt-white);
+  font-weight: 700;
+}
+
+.hlt-faq details {
+  margin-bottom: var(--hlt-space-2);
+}
+
+.hlt-faq summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.hlt-faq summary::after {
+  content: "+";
+  color: var(--hlt-red);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.hlt-faq details[open] summary::after {
+  content: "−";
+}
+
+.hlt-final-cta {
+  border-top: 1px solid var(--hlt-border);
+  text-align: center;
+}
+
+.hlt-final-cta h2 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin-bottom: var(--hlt-space-2);
+}
+
+.hlt-final-cta p {
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  :is(
+    .hlt-hero,
+    .hlt-problem,
+    .hlt-services,
+    .hlt-featured-projects,
+    .hlt-method,
+    .hlt-ai,
+    .hlt-trust,
+    .hlt-faq,
+    .hlt-final-cta,
+    .hlt-services-hero,
+    .hlt-core-services,
+    .hlt-secondary-services,
+    .hlt-projects-hero,
+    .hlt-method-hero,
+    .hlt-about-hero,
+    .hlt-contact-hero
+  ) {
+    padding: 6rem 4rem;
+  }
+
+  .hlt-services .wp-block-columns,
+  .hlt-core-services .wp-block-columns,
+  .hlt-secondary-services .wp-block-columns {
+    gap: var(--hlt-space-3);
+  }
+}
